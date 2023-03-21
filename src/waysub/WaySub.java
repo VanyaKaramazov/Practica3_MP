@@ -3,13 +3,28 @@ package waysub;
 public class WaySub {
 
 	public static void main(String[] args) {
-		Platillos platillo = new Baguette(); 
-		System.out.println(platillo.getDescripcion() + " $" + platillo.costo());
+		Baguettes platillo = new Baguette(); 
+		System.out.printf(platillo.getDescripcion()+ " $ %.2f" + " \n", platillo.costo() );
 		//Ordenamos un baguette e imprimimos su descripcion
 		
-		Platillos platillo1 = new Baguette(); 
+		Baguettes platillo0 = new Baguette(); 
+		platillo0 = new Catsup(platillo0);
+		System.out.printf(platillo0.getDescripcion()+ " $ %.2f" + " \n", platillo0.costo());
+		
+		Baguettes platillo1 = new Baguette(); 
 		platillo1 = new Catsup(platillo1);
-		System.out.println(platillo1.getDescripcion() + " $" + platillo1.costo());
+		platillo1 = new Mostaza(platillo1);
+		platillo1 = new Pollo(platillo1);
+		System.out.printf(platillo1.getDescripcion()+ " $ %.2f" + " \n", platillo1.costo());
+		
+		Pizza pizza1 = new PizzaHawaiana();
+		System.out.println(pizza1.getDescripcion() + " $ "+ pizza1.costo());
+		
+		PizzaHawaiana pizza2 = new PizzaHawaiana();
+		Baguettes pizza2A = new AdaptadorPizza(pizza2); 
+		System.out.printf(pizza2A.getDescripcion()+ " $ %.2f" + " \n", pizza2A.costo() );
 	}
 
 }
+
+

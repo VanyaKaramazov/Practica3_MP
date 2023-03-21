@@ -1,13 +1,16 @@
 package waysub;
 //*CLase que representa un baguette y sobresescribe el metodo costo
-public class Baguette extends Platillos {
+public class Baguette implements Baguettes {
 	
-	public Baguette() {
-		descripcion = "Baguette";
-	}
 	
 	public double costo() {
-		return 2.00;
+		return 3.00;
+	}
+
+	@Override
+	public String getDescripcion() {
+		// TODO Auto-generated method stub
+		return "Baguette";
 	}
 
 }

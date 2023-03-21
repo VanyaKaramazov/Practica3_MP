@@ -5,22 +5,22 @@ package waysub;
  */
 
 
-public class Catsup extends DecoradorPlatillo{
+public class Pepperoni extends DecoradorPlatillo{
 
 	Baguettes platillo;
 	
-	public Catsup(Baguettes platillo) {
+	public Pepperoni(Baguettes platillo) {
 		this.platillo = platillo;
 	}
 	
 	@Override
 	public String getDescripcion() {
-		return platillo.getDescripcion() + ", Catsup"; 
+		return platillo.getDescripcion() + ", Pepperoni"; 
 	}
 
 	@Override
 	public double costo() {
-		return .10 + platillo.costo();
+		return .25 + platillo.costo();
 	}
 
 }

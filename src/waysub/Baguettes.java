@@ -5,12 +5,10 @@ package waysub;
  *  posteriormente se incluiran las pizzas.
  *  Tiene un atributo Descricion y al menos dos metodos: getDescripcion y costo
  */
-public abstract class Platillos {
+public interface Baguettes {
 	String descripcion = "Platillo desconocido";
 	
-	public String getDescripcion() {
-		return descripcion;
-	}
+	public String getDescripcion();
 	
 	public abstract double costo();
 }
