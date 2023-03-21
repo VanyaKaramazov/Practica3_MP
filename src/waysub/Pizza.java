@@ -21,23 +21,6 @@ public interface Pizza {
 	 */
 	public String getDescripcion();
 	
-	/**
-	 * 
-	 * @return el tipo de queso de la pizza \(Cheddar y no Manchego) o (Manchego y no Cheddar)\
-	 */
-	public String tipoQueso();
 	
-	/**
-	 * 
-	 * @return el tipo de carne de la pizza: Salchica, Pollo o Jamon
-	 */
-	public String tipoCarne();
-	
-	
-	/**
-	 * 
-	 * @return el tipo de masa de la pizza: Gruesa o Delgada
-	 */
-	public String tipoMasa();
 	
 }

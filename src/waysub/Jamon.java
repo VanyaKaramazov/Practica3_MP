@@ -1,7 +1,7 @@
 package waysub;
 
 /*
- * Clase que representa el decorador PJamon. Sobreescribe los metodos de Platillos
+ * Clase que representa el decorador PJamon. Sobreescribe los metodos de Baguettes
  */
 
 

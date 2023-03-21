@@ -6,7 +6,6 @@ package waysub;
  *  Tiene un atributo Descricion y al menos dos metodos: getDescripcion y costo
  */
 public interface Baguettes {
-	String descripcion = "Platillo desconocido";
 	
 	public String getDescripcion();
 	

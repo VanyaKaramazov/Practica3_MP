@@ -1,5 +1,11 @@
 package waysub;
 
+
+/*
+ * Clase que representa el decorador Pollo. Sobreescribe los metodos de Baguettes
+ */
+
+
 public class Pollo extends DecoradorPlatillo{
 
 	Baguettes platillo;

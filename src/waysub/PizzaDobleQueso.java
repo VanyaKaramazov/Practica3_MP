@@ -1,26 +1,20 @@
 package waysub;
 
-/**
- * Clase que representa una pizza Hawaiana. Implementa los metodos de la interfaz Pizza
- * @author debian
- *
- */
+public class PizzaDobleQueso implements Pizza {
 
-public class PizzaHawaiana implements Pizza {
-	
 	/**
 	 * Descripcion de la pizza. Esta' definida por el tipo de queso, el tipo de carne, y el tipo de masa. 
 	 */
 	public String descripcion = "Pizza desconocida.";
 
 
-	public PizzaHawaiana() {
-		 descripcion = "Pizza Hawaiana";
+	public PizzaDobleQueso() {
+		 descripcion = "Pizza Doble Queso";
 	}
 	
 	@Override
 	public double costo() {
-		return 100.00;
+		return 120.00;
 	}
 
 	
@@ -28,6 +22,5 @@ public class PizzaHawaiana implements Pizza {
 	public String getDescripcion() {
 		return descripcion;
 	}
-
 
 }
