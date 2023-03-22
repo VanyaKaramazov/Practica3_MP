@@ -32,7 +32,7 @@ public class WaySub {
 
         do {
             System.out.println("Elija una opcion para ordenar: \n"+
-            				"1 .- BAGUETTE $40 + ingredientes\n" +
+            				"1 .- BAGUETTE \n" +
                             "2 .- PIZZA \n" +
                             "0 .- SALIR \n");
             while (true) {
@@ -42,7 +42,7 @@ public class WaySub {
                     break;
                 } catch (NumberFormatException nfe) { 
                     System.out.println("Por favor elige una opción valida \n" +
-                    		"1 .- BAGUETTE $40 + ingredientes\n" +
+                    		"1 .- BAGUETTE \n" +
                             "2 .- PIZZA \n" +
                             "0 .- SALIR \n");
                 }
@@ -204,28 +204,32 @@ public class WaySub {
  		            switch (opcionPizza) {
  		            case 1://Si se elije la opcion 1, se crea una pizza Hawaiana
  		            	Pizza pizzaH = new PizzaHawaiana();
- 		            	System.out.println(pizzaH.getDescripcion() + " $ "+ pizzaH.costo());
+ 		            	Baguettes pizzaHA = new AdaptadorPizza(pizzaH);
+ 		            	System.out.println(pizzaHA.getDescripcion() + " $ "+ pizzaHA.costo());
  		            	break;
  		            
  	                case 2://Si se elije la opcion 2, se agrega Pan Integral como ingrediente
  	                	Pizza pizzaDQ = new PizzaDobleQueso();
- 	                	System.out.println(pizzaDQ.getDescripcion() + " $ "+ pizzaDQ.costo());
+ 	                	Baguettes pizzaDQA = new AdaptadorPizza(pizzaDQ);
+ 	                	System.out.println(pizzaDQA.getDescripcion() + " $ "+ pizzaDQA.costo());
  		            	break;
  		            	
  	                case 3://Si se elije la opcion 3, se agrega Pan de Avena como ingrediente
  	                	Pizza pizzaC = new PizzaCasa();
- 	                	Pizza pizza = pizzaC;
- 	                	System.out.println(pizzaC.getDescripcion() + " $ "+ pizzaC.costo());
+ 	                	Baguettes pizzaCA = new AdaptadorPizza(pizzaC);
+ 	                	System.out.println(pizzaCA.getDescripcion() + " $ "+ pizzaCA.costo());
  		            	break;
  		            	
  	                case 4://Si se elije la opcion 2, se agrega Pan Integral como ingrediente
  	                	Pizza pizzaE = new PizzaEspecial();
- 	                	System.out.println(pizzaE.getDescripcion() + " $ "+ pizzaE.costo());
+ 	                	Baguettes pizzaEA = new AdaptadorPizza(pizzaE);
+ 	                	System.out.println(pizzaEA.getDescripcion() + " $ "+ pizzaEA.costo());
  		            	break;
  		            	
  	                case 5://Si se elije la opcion 3, se agrega Pan de Avena como ingrediente
  	                	Pizza pizzaS = new PizzaSalchicha();
- 	                	System.out.println(pizzaS.getDescripcion() + " $ "+ pizzaS.costo());
+ 	                	Baguettes pizzaSA = new AdaptadorPizza(pizzaS);
+ 	                	System.out.println(pizzaSA.getDescripcion() + " $ "+ pizzaSA.costo());
  		            	break;
  		            }
                 		

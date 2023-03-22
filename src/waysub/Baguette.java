@@ -4,7 +4,7 @@ public class Baguette implements Baguettes {
 	
 	
 	public double costo() {
-		return 40;
+		return 0;
 	}
 
 	@Override
