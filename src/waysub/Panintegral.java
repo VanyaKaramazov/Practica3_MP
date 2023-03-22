@@ -20,7 +20,7 @@ public class Panintegral extends DecoradorPlatillo{
 
 	@Override
 	public double costo() {
-		return .30 + platillo.costo();
+		return 20 + platillo.costo();
 	}
 
 }

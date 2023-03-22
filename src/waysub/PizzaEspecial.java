@@ -20,7 +20,7 @@ public class PizzaEspecial implements Pizza {
 	
 	@Override
 	public double costo() {
-		return 230.00;
+		return 200.00;
 	}
 
 	

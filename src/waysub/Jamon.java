@@ -7,6 +7,9 @@ package waysub;
 
 public class Jamon extends DecoradorPlatillo{
 
+	/**
+	 * Instancia de Baguettes
+	 */
 	Baguettes platillo;
 	
 	public Jamon(Baguettes platillo) {
@@ -20,7 +23,7 @@ public class Jamon extends DecoradorPlatillo{
 
 	@Override
 	public double costo() {
-		return .30 + platillo.costo();
+		return 15 + platillo.costo();
 	}
 
 }

@@ -9,7 +9,7 @@ package waysub;
 public class PizzaHawaiana implements Pizza {
 	
 	/**
-	 * Descripcion de la pizza. Esta' definida por el tipo de queso, el tipo de carne, y el tipo de masa. 
+	 * Nombre de la pizza. 
 	 */
 	public String descripcion = "Pizza desconocida.";
 

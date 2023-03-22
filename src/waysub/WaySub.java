@@ -1,6 +1,18 @@
 package waysub;
 
 import java.util.Scanner;
+
+
+
+/** 
+ * Clase que representa al restaurante WaySub, 
+ * muestra un menu interactivo e instancia los platillos.
+ * Permite ordenar Baguettes y pizzas que se adaptan a la interface Baguettes para que se muestren los ingredientes
+ * como se  hace para los baguettes
+ * @author debian
+ *
+ */
+
 public class WaySub {
 
 
@@ -12,15 +24,15 @@ public class WaySub {
         int opcion;
         int opcionPan;
         int opcionIngredientes;
+        int opcionPizza;
         
         
         System.out.println("Bienvenido a WaySub, ademas de nuestros deliciosos baguettes, \n"
-        		+ " ahora tambien ofrecemos pizzas.");
-        System.out.println("Elija una opcion para ordenar: ");
+        		+ "ahora tambien ofrecemos pizzas.");
 
         do {
-            System.out.println(
-            				"1 .- BAGUETTE \n" +
+            System.out.println("Elija una opcion para ordenar: \n"+
+            				"1 .- BAGUETTE $40 + ingredientes\n" +
                             "2 .- PIZZA \n" +
                             "0 .- SALIR \n");
             while (true) {
@@ -30,7 +42,7 @@ public class WaySub {
                     break;
                 } catch (NumberFormatException nfe) { 
                     System.out.println("Por favor elige una opción valida \n" +
-                    		"1 .- BAGUETTE \n" +
+                    		"1 .- BAGUETTE $40 + ingredientes\n" +
                             "2 .- PIZZA \n" +
                             "0 .- SALIR \n");
                 }
@@ -42,9 +54,9 @@ public class WaySub {
                 	Baguettes baguette0 = new Baguette();
                 	
 	                System.out.println("Elija el tipo de pan: \n"+
-	            				"1 .- Pan Blanco \n" +
-	                            "2 .- Pan  Integral \n" +
-	                            "3 .- Pan con Avena \n" +
+	            				"1 .- Pan Blanco $10\n" +
+	                            "2 .- Pan  Integral $20\n" +
+	                            "3 .- Pan con Avena $15\n" +
 	                			"0 .- SALIR \n");
 		            while (true) {
 		                try {
@@ -53,9 +65,9 @@ public class WaySub {
 		                    break;
 		                } catch (NumberFormatException nfe) { 
 		                    System.out.println("Por favor elige una opción valida \n" +
-		            				"1 .- Pan Blanco \n" +
-		                            "2 .- Pan  Integral \n" +
-		                            "3 .- Pan con Avena \n" +
+		            				"1 .- Pan Blanco $10\n" +
+		                            "2 .- Pan  Integral $20\n" +
+		                            "3 .- Pan con Avena $15\n" +
 		                			"0 .- SALIR \n");
 		                }
 		                
@@ -83,15 +95,15 @@ public class WaySub {
 		             */
 		            do {
 		            	System.out.println("Elija los ingredientes (tantos como quiera, pero uno a la vez): \n"+
-	            				"1 .- Catsup \n" +
-	                            "2 .- Mayonesa \n" +
-	                            "3 .- Mostaza \n" +
-	                            "4 .- Pollo \n" +
-	                            "5 .- Pepperoni \n" +
-	                            "6 .- Cebolla \n" +
-	                            "7 .- Jitomate \n" +
-	                            "8 .- Jamon \n" +
-	                            "9 .- Lechuga \n" +
+	            				"1 .- Catsup $5\n" +
+	                            "2 .- Mayonesa $5\n" +
+	                            "3 .- Mostaza $5 \n" +
+	                            "4 .- Pollo $20\n" +
+	                            "5 .- Pepperoni $25\n" +
+	                            "6 .- Cebolla $7\n" +
+	                            "7 .- Jitomate $10\n" +
+	                            "8 .- Jamon $15\n" +
+	                            "9 .- Lechuga $10\n" +
 	                			"0 .- ORDENAR \n");
 			            while (true) {
 			                try {
@@ -100,15 +112,15 @@ public class WaySub {
 			                    break;
 			                } catch (NumberFormatException nfe) { 
 			                    System.out.println("Por favor elige una opción valida \n" +
-			                    		"1 .- Catsup \n" +
-			                            "2 .- Mayonesa \n" +
-			                            "3 .- Mostaza \n" +
-			                            "4 .- Pollo \n" +
-			                            "5 .- Pepperoni \n" +
-			                            "6 .- Cebolla \n" +
-			                            "7 .- Jitomate \n" +
-			                            "8 .- Jamon \n" +
-			                            "9 .- Lechuga \n" +
+			                    		"1 .- Catsup $5\n" +
+			                            "2 .- Mayonesa $5\n" +
+			                            "3 .- Mostaza $5 \n" +
+			                            "4 .- Pollo $20\n" +
+			                            "5 .- Pepperoni $25\n" +
+			                            "6 .- Cebolla $7\n" +
+			                            "7 .- Jitomate $10\n" +
+			                            "8 .- Jamon $15\n" +
+			                            "9 .- Lechuga $10\n" +
 			                			"0 .- ORDENAR \n");
 			                }
 			                
@@ -152,17 +164,73 @@ public class WaySub {
 		            
 		           
 		            /**
-		             * Se imprime la descripcion del baguette seguida de su costo.
+		             * Se imprime la descripcion del baguette, seguida de su costo.
 		             */
 		            System.out.printf(baguette0.getDescripcion()+ " $ %.2f" + " \n", baguette0.costo() );
 		            
                     break;
                     
                     
-                case 2:
+                case 2: //AQUI VA EL ALGORITMO PARA ORDENAR UNA PIZZA
                 	
-                	//AQUI VA EL ALGORITMO PARA ORDENAR UNA PIZZA
-       
+                	
+                	do {
+                		
+                		 System.out.println("Elija la pizza que desea ordenar: \n"+
+ 	            				"1 .- Pizza Hawaiana $100.00\n" +
+ 	                            "2 .- Pizza Doble Queso $140.00 \n" +
+ 	                            "3 .- Pizza de la Casa $160.00 \n" +
+ 	                            "4 .- Pizza Especial $200.00 \n" +
+ 	                            "5 .- Pizza Salchicha $120.00 \n" +
+ 	                			"0 .- SALIR \n");
+ 		            while (true) {
+ 		                try {
+ 		                    String opcionUsser = sc.nextLine();
+ 		                    opcionPizza = Integer.parseInt(opcionUsser);
+ 		                    break;
+ 		                } catch (NumberFormatException nfe) { 
+ 		                    System.out.println("Por favor elige una opción valida \n" +
+ 		                    		"Elija la pizza que desea ordenar: \n"+
+ 		            				"1 .- Pizza Hawaiana $100.00\n" +
+ 		                            "2 .- Pizza Doble Queso $140.00 \n" +
+ 		                            "3 .- Pizza de la Casa $160.00 \n" +
+ 		                            "4 .- Pizza Especial $200.00 \n" +
+ 		                            "5 .- Pizza Salchicha $120.00 \n" +
+ 		                			"0 .- SALIR \n");
+ 		                }
+ 		                
+ 	                }
+ 		            
+ 		            switch (opcionPizza) {
+ 		            case 1://Si se elije la opcion 1, se crea una pizza Hawaiana
+ 		            	Pizza pizzaH = new PizzaHawaiana();
+ 		            	System.out.println(pizzaH.getDescripcion() + " $ "+ pizzaH.costo());
+ 		            	break;
+ 		            
+ 	                case 2://Si se elije la opcion 2, se agrega Pan Integral como ingrediente
+ 	                	Pizza pizzaDQ = new PizzaDobleQueso();
+ 	                	System.out.println(pizzaDQ.getDescripcion() + " $ "+ pizzaDQ.costo());
+ 		            	break;
+ 		            	
+ 	                case 3://Si se elije la opcion 3, se agrega Pan de Avena como ingrediente
+ 	                	Pizza pizzaC = new PizzaCasa();
+ 	                	Pizza pizza = pizzaC;
+ 	                	System.out.println(pizzaC.getDescripcion() + " $ "+ pizzaC.costo());
+ 		            	break;
+ 		            	
+ 	                case 4://Si se elije la opcion 2, se agrega Pan Integral como ingrediente
+ 	                	Pizza pizzaE = new PizzaEspecial();
+ 	                	System.out.println(pizzaE.getDescripcion() + " $ "+ pizzaE.costo());
+ 		            	break;
+ 		            	
+ 	                case 5://Si se elije la opcion 3, se agrega Pan de Avena como ingrediente
+ 	                	Pizza pizzaS = new PizzaSalchicha();
+ 	                	System.out.println(pizzaS.getDescripcion() + " $ "+ pizzaS.costo());
+ 		            	break;
+ 		            }
+                		
+                	}while(opcionPizza != 0);
+                	
                     break;
                 case 0:
                     break; 
@@ -172,54 +240,42 @@ public class WaySub {
             }
 
         } while (opcion != 0);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		Baguettes platillo = new Baguette(); 
-		System.out.printf(platillo.getDescripcion()+ " $ %.2f" + " \n", platillo.costo() );
-		//Ordenamos un baguette e imprimimos su descripcion
-		
-		Baguettes platillo0 = new Baguette(); 
-		platillo0 = new Catsup(platillo0);
-		System.out.printf(platillo0.getDescripcion()+ " $ %.2f" + " \n", platillo0.costo());
-		
-		Baguettes platillo1 = new Baguette(); 
-		platillo1 = new Catsup(platillo1);
-		platillo1 = new Mostaza(platillo1);
-		platillo1 = new Pollo(platillo1);
-		System.out.printf(platillo1.getDescripcion()+ " $ %.2f" + " \n", platillo1.costo());
-		
-		Pizza pizza1 = new PizzaHawaiana();
-		System.out.println(pizza1.getDescripcion() + " $ "+ pizza1.costo());
-		
-		
-		PizzaHawaiana pizza2 = new PizzaHawaiana();
-		Baguettes pizza2A = new AdaptadorPizza(pizza2); 
-		System.out.printf(pizza2A.getDescripcion()+ " $ %.2f" + " \n", pizza2A.costo() );
-		
-		PizzaDobleQueso pizza3 = new PizzaDobleQueso();
-		Baguettes pizza3A = new AdaptadorPizza(pizza3); 
-		System.out.printf(pizza3A.getDescripcion()+ " $ %.2f" + " \n", pizza3A.costo() );
-		
-		PizzaCasa pizza6 = new PizzaCasa();
-		Baguettes pizza6A = new AdaptadorPizza(pizza6); 
-		System.out.printf(pizza6A.getDescripcion()+ " $ %.2f" + " \n", pizza6A.costo() );
-		
-		PizzaSalchicha pizza5 = new PizzaSalchicha();
-		Baguettes pizza5A = new AdaptadorPizza(pizza5); 
-		System.out.printf(pizza5A.getDescripcion()+ " $ %.2f" + " \n", pizza5A.costo() );
-		
-		PizzaEspecial pizza4 = new PizzaEspecial();
-		Baguettes pizza4A = new AdaptadorPizza(pizza4); 
-		System.out.printf(pizza4A.getDescripcion()+ " $ %.2f" + " \n", pizza4A.costo() );
+
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

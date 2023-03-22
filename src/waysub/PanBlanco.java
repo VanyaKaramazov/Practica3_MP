@@ -20,7 +20,7 @@ public class PanBlanco extends DecoradorPlatillo{
 
 	@Override
 	public double costo() {
-		return .25 + platillo.costo();
+		return 10 + platillo.costo();
 	}
 
 }

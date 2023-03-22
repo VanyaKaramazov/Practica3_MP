@@ -20,7 +20,7 @@ public class Catsup extends DecoradorPlatillo{
 
 	@Override
 	public double costo() {
-		return .10 + platillo.costo();
+		return 5 + platillo.costo();
 	}
 
 }

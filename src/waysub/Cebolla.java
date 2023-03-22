@@ -20,7 +20,7 @@ public class Cebolla extends DecoradorPlatillo{
 
 	@Override
 	public double costo() {
-		return .30 + platillo.costo();
+		return 7 + platillo.costo();
 	}
 
 }
