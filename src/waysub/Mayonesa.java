@@ -15,7 +15,7 @@ public class Mayonesa extends DecoradorPlatillo{
 	
 	@Override
 	public String getDescripcion() {
-		return platillo.getDescripcion() + ", Jitomate"; 
+		return platillo.getDescripcion() + ", Mayonesa"; 
 	}
 
 	@Override

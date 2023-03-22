@@ -15,7 +15,7 @@ public class Lechuga extends DecoradorPlatillo{
 	
 	@Override
 	public String getDescripcion() {
-		return platillo.getDescripcion() + ", Jitomate"; 
+		return platillo.getDescripcion() + ", Lechuga"; 
 	}
 
 	@Override

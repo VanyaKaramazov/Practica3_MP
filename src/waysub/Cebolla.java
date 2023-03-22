@@ -15,7 +15,7 @@ public class Cebolla extends DecoradorPlatillo{
 	
 	@Override
 	public String getDescripcion() {
-		return platillo.getDescripcion() + ", Jitomate"; 
+		return platillo.getDescripcion() + ", Cebolla"; 
 	}
 
 	@Override

@@ -15,7 +15,7 @@ public class Panintegral extends DecoradorPlatillo{
 	
 	@Override
 	public String getDescripcion() {
-		return platillo.getDescripcion() + ", Jitomate"; 
+		return platillo.getDescripcion() + ", Pan Integral"; 
 	}
 
 	@Override

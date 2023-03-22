@@ -15,7 +15,7 @@ public class PanBlanco extends DecoradorPlatillo{
 	
 	@Override
 	public String getDescripcion() {
-		return platillo.getDescripcion() + ", Jitomate"; 
+		return platillo.getDescripcion() + ", Pan Blanco"; 
 	}
 
 	@Override

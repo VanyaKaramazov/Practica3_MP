@@ -32,7 +32,7 @@ public class AdaptadorPizza implements Baguettes  {
 			return "Jamon, Salchicha";
 		}else if(pizza.getDescripcion() == "Pizza Doble Queso") {
 			return "";
-		}else if(pizza.getDescripcion() == "Pizza Ligera") {
+		}else if(pizza.getDescripcion() == "Pizza de la Casa") {
 		return "Pollo";
 		}
 		else return "Salchicha";

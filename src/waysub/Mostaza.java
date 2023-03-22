@@ -15,7 +15,7 @@ public class Mostaza extends DecoradorPlatillo{
 	
 	@Override
 	public String getDescripcion() {
-		return platillo.getDescripcion() + ", Jitomate"; 
+		return platillo.getDescripcion() + ", Mostaza"; 
 	}
 
 	@Override
